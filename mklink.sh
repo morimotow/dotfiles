@@ -1,6 +1,13 @@
 #!/bin/sh
 
 # Vim関係
+if [ ! -d ~/.vim ] ; then
+  mkdir ~/.vim
+fi
+if [ ! -d ~/.vim/bundle ] ; then
+  mkdir ~/.vim/bundle
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+fi
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
 ln -sf ~/dotfiles/.vim/morimoto ~/.vim/morimoto
