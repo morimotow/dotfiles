@@ -13,7 +13,9 @@ set nowritebackup
 set nobackup
 set noswapfile
 "Undoファイルを使用しない
-set noundofile
+if v:version > 704
+  set noundofile
+endif
 "viminfoを作成しない
 "set viminfo=
 "クリップボードを共有
