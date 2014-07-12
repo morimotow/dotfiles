@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# zsh関係
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zshenv ~/.zshenv
+
 # Vim関係
 if [ ! -d ~/.vim ] ; then
   mkdir ~/.vim
