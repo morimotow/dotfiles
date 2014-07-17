@@ -13,7 +13,7 @@ set nowritebackup
 set nobackup
 set noswapfile
 "Undoファイルを使用しない
-if v:version > 704
+if v:version > 703
   set noundofile
 endif
 "viminfoを作成しない
