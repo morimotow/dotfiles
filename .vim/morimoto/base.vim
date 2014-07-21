@@ -50,3 +50,7 @@ if has('mouse')
 endif
 "ヘルプファイルは日本語を優先的に読み込む
 set helplang=ja,en
+"文字コードの自動判別設定
+:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+"改行コードの自動判別設定
+:set fileformats=unix,dos,mac
