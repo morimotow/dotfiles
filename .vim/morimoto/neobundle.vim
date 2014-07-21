@@ -10,7 +10,8 @@ else
 endif
 
 " プラグインの一覧
-NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neobundle.vim'  " NeoBundle本体
+NeoBundle 'vim-jp/vimdoc-ja'      " 日本語ヘルプ(最初に1回だけ helptags ~/.vim/bundle/vimdoc-ja/docを実行)
 
 " Shellなどの実行機能
 NeoBundleLazy 'thinca/vim-quickrun', {

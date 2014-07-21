@@ -48,4 +48,5 @@ set wildmenu wildmode=list:full
 if has('mouse')
   set mouse=a
 endif
-
+"ヘルプファイルは日本語を優先的に読み込む
+set helplang=ja,en
