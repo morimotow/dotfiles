@@ -1,5 +1,6 @@
 scriptencoding utf-8
 set encoding=utf-8
+set fileformat=unix
 
 " Vi互換OFF
 set nocompatible
