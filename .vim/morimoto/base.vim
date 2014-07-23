@@ -54,3 +54,9 @@ set helplang=ja,en
 :set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 "改行コードの自動判別設定
 :set fileformats=unix,dos,mac
+" タブ幅制御
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" 折り返ししない
+set nowrap
