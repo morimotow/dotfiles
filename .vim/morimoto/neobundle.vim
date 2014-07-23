@@ -20,6 +20,14 @@ NeoBundleLazy 'thinca/vim-quickrun', {
         \ 'commands' : 'QuickRun',
         \ }}
 
+NeoBundleLazy 'Shougo/unite.vim' , {
+			\   'autoload' : { 'commands' : [ 'Unite' ] }
+			\ }
+let s:bundle = neobundle#get('unite.vim')
+function! s:bundle.hooks.on_source(bundle)
+	  " ココにunite.vimの設定とか記述する。
+endfunction
+
 " 文字列補完機能
 if has('lua')
   NeoBundle 'Shougo/neocomplete', {'lazy': 1, 'autoload': {'insert': 1 }}
