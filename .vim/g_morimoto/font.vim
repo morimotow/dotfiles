@@ -6,6 +6,8 @@ elseif has('unix')
   set guifont=Ricty\ Diminished\ 12
 elseif has('mac')
   set guifont=Ricty\ Diminished:h14
+  set guifontwide=Ricty\ Diminished:h14
+  set ambiwidth=auto
 elseif has('win32') || has('win64')
   set guifont=Consolas:h14
   set guifontwide=MeiryoKe_Console:h14
