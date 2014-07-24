@@ -19,8 +19,8 @@ endif
 "viminfoを作成しない
 "set viminfo=
 "クリップボードを共有
-if has('unix')
-  set clipboard+=unnamedplus
+if has('unnamedplus')
+  set clipboard+=unnamedplus,unnamed
 else
   set clipboard+=unnamed
 endif
