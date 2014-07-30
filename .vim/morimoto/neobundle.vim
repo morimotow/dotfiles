@@ -28,6 +28,12 @@ function! s:bundle.hooks.on_source(bundle)
 	  " ココにunite.vimの設定とか記述する。
 endfunction
 
+" プロジェクト管理
+NeoBundleLazy 'vimplugin/project.vim' , {
+			\   'autoload' : { 'commands' : [ 'Project' ] }
+			\ }
+
+
 " 文字列補完機能
 if has('lua')
   NeoBundle 'Shougo/neocomplete', {'lazy': 1, 'autoload': {'insert': 1 }}
