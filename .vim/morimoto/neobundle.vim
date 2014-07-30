@@ -23,16 +23,16 @@ NeoBundleLazy 'thinca/vim-quickrun', {
 NeoBundleLazy 'Shougo/unite.vim' , {
 			\   'autoload' : { 'commands' : [ 'Unite' ] }
 			\ }
-let s:bundle = neobundle#get('unite.vim')
-function! s:bundle.hooks.on_source(bundle)
-	  " ココにunite.vimの設定とか記述する。
-endfunction
 
 " プロジェクト管理
-NeoBundleLazy 'vimplugin/project.vim' , {
-			\   'autoload' : { 'commands' : [ 'Project' ] }
-			\ }
+NeoBundle 'vimplugin/project.vim'
 
+" プロジェクト毎に設定ファイルを分ける
+NeoBundle 'thinca/vim-localrc'
+
+NeoBundleLazy 'ryoppy/vim-scp-upload', {
+			\   'autoload' : { 'commands' : [ '<Leader>scp' ] }
+			\ }
 
 " 文字列補完機能
 if has('lua')

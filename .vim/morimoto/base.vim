@@ -56,7 +56,7 @@ set helplang=ja,en
 :set fileformats=unix,dos,mac
 " タブ幅制御
 set tabstop=4
-set softtabstop=4
+set softtabstop=0
 set shiftwidth=4
 " 折り返ししない
 set nowrap

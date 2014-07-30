@@ -12,4 +12,16 @@ else
   set runtimepath+=$HOME\vimfiles
 
 endif
-runtime! morimoto/*.vim
+
+" 基本的な設定ファイルを読み込む
+source $HOME/.vim/morimoto/base.vim
+source $HOME/.vim/morimoto/display.vim
+source $HOME/.vim/morimoto/neobundle.vim
+source $HOME/.vim/morimoto/search.vim
+source $HOME/.vim/morimoto/key_normal.vim
+source $HOME/.vim/morimoto/statushilite.vim
+source $HOME/.vim/morimoto/statusline.vim
+source $HOME/.vim/morimoto/zenkakuspace.vim
+
+" プラグイン毎の設定ファイルを読み込む
+runtime! morimoto/_plug_*.vim
