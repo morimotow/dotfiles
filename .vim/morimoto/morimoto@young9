@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>SUBARU：試乗車検索</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link type="text/css" href="/common/css/common_renew.css" rel="stylesheet" media="all" />
+
+<link type="text/css" href="assets/css/subaru.search.css" rel="stylesheet" media="all" />
+<!--[if lte IE 9]>
+<link type="text/css" href="assets/css/subaru.search.ie.css" rel="stylesheet" media="all" />
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" href="assets/css/subaru.search.ie8.css" rel="stylesheet" media="all" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link type="text/css" href="assets/css/subaru.search.ie7.css" rel="stylesheet" media="all" />
+<![endif]-->
+
+<script type="text/javascript" src="/common/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/common/js/utility.js"></script>
+<script type="text/javascript" src="/common/js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="assets/js/jquery.mobile.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/swfaddress.js"></script>
+<script type="text/javascript" src="assets/js/subaru.search.js"></script>
+<script type="text/javascript" src="assets/js/subaru.search.config.js"></script>
+<script type="text/javascript" src="assets/js/subaru.search.config.main.js"></script>
+<script type="text/javascript" src="assets/js/subaru.search.app.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+    new subaru.search.SearchDemoCars($('#subaru-search-content'));
+});
+</script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+$(function() {
+	DD_belatedPNG.fix('.trans, .png_bg');
+});
+</script>
+<![endif]-->
+<script type="text/javascript">
+<!--
+	var mad_client_id='5397';
+	var mad_group_id='convtrack';
+-->
+</script>
+<script type="text/javascript" src="http://send.microad.jp/js/conv0000.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35124854-1']);
+  _gaq.push(['_setDomainName', 'subaru.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<!-- universal analytics20140428 -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50204328-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['subaru.jp']);
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+<!-- universal analytics -->
+
+
+<script language="Javascript" type="text/javascript">
+<!--
+/* <![CDATA[ */
+var account_id="qYolhjAOLDVGfHCpbvPS"; 
+var transaction_id = "";
+var amount = "";
+if (location.protocol == "https:") { var protocol = "https:"} else { var protocol = "http:" }
+document.write("<img width=1 height=1 border=0 src='" + protocol + "//b90.yahoo.co.jp/c?account_id=" + account_id + "&transaction_id=" + transaction_id + "&amount=" + amount + "'>");
+/* ]]> */
+//-->
+</script>
+<div id="container">
+<!--ここからヘッダー項目 -->
+<!--#include virtual="/ssi/m_head.html"-->
+<!--ここまでヘッダー項目 -->
+
+<!--ここからグローバル項目 -->
+<!--#include virtual="/ssi/purchase.html"-->
+<!--ここまでグローバル項目 -->
+
+    <div id="contents">
+        <div id="subaru-search-content">
+            <div class="header">
+                <div id="path"><a href="http://www.subaru.jp/">ホーム</a> &gt; <a href="http://www.subaru.jp/purchase/index.html">ご購入サポート</a> &gt; 試乗車検索</div>
+                <h1 class="page-title"><img src="assets/img/header_drivercar_01.png" alt="試乗車検索" width="970" height="130" /></h1>
+                <p class="note">ご試乗になりたい車種のあるスバル特約店を、簡単に検索いただけます。</p>
+            </div>
+            <div class="subaru-search-content-body" id="subaru-search-content-body">
+            </div><!--/subaru-search-content-body -->
+            <div class="note-block-B01">
+                <ul class="note-list">
+                    <li>※全国のディーラーよりお好みの試乗車が検索できます。</li>
+                    <li>※試乗のご予約・ご確認につきましては、各販売店に直接ご連絡をお願いいたします。</li>
+                    <li>※装備・仕様は各車両によって異なります。</li>
+                    <li>※その他ご不明な点につきましては、各販売店にお問い合わせ下さい。</li>
+                </ul><!-- /note-list -->
+            </div>
+        </div>
+        <!--/subaru-search-content-->
+
+    </div>
+    <!--/contents-->
+
+    <!-- 検索結果unitag表示用 -->
+    <iframe id="unitag_result" width="0" height="0" frameborder="0"></iframe>
+    <!-- /検索結果unitag表示用 -->
+
+    <div id="foot">
+    <!--ここからフッター -->
+    <!--#include virtual="/ssi/foot.html"-->
+    <!--ここまでフッター -->
+    </div>
+
+</div>
+<!--/container-->
+
+<!-- Visionalist -->
+<script src="http://img.ak.impact-ad.jp/imd/byclient.js"></script>
+<SCRIPT type="text/javascript">var trace_p='';</SCRIPT>
+<SCRIPT type="text/javascript" src="http://www.subaru.jp/common/js/visionalist.js"></SCRIPT>
+<!-- Visionalist -->
+<!--#include virtual="/ssi/unitag.html"-->
+
+<!-- Google Code for &#35430;&#20055;&#36554;&#12434;&#25506;&#12377; Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1007099779;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "xARcCM2ByQIQg7-c4AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1007099779/?label=xARcCM2ByQIQg7-c4AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- 131115 set -->
+<!-- Google Code for &#12467;&#12531;&#12496;&#12540;&#12472;&#12519;&#12531;&#65298; Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1000960672;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "y-_DCJDV6QYQoOWl3QM";
+var google_conversion_value = 0;
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1000960672/?value=0&amp;label=y-_DCJDV6QYQoOWl3QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- /131115 set -->
+
+<!-- /140416 set -->
+
+<script type="text/javascript" class="microad_blade_track">
+<!--
+var microad_blade_jp = microad_blade_jp || { 'params' : new Array(), 'complete_map' : new Object() };
+(function() {
+var param = {'co_account_id' : '1850', 'group_id' : 'convtrack10588', 'country_id' : '1', 'ver' : '2.1.0'};
+microad_blade_jp.params.push(param);
+
+var src = (location.protocol == 'https:')
+? 'https://d-track.send.microad.jp/js/blade_track_jp.js' : 'http://d-cache.microad.jp/js/blade_track_jp.js';
+
+var bs = document.createElement('script');
+bs.type = 'text/javascript'; bs.async = true;
+bs.charset = 'utf-8'; bs.src = src;
+
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(bs, s);
+})();
+-->
+</script>
+
+<!-- /140416 set -->
+
+<script type="text/javascript" class="microad_blade_track">
+<!--
+var microad_blade_jp = microad_blade_jp || { 'params' : new Array(), 'complete_map' : new Object() };
+(function() {
+var param = {'co_account_id' : '1850', 'group_id' : 'convtrack10588', 'country_id' : '1', 'ver' : '2.1.0'};
+microad_blade_jp.params.push(param);
+
+var src = (location.protocol == 'https:')
+? 'https://d-track.send.microad.jp/js/blade_track_jp.js' : 'http://d-cache.microad.jp/js/blade_track_jp.js';
+
+var bs = document.createElement('script');
+bs.type = 'text/javascript'; bs.async = true;
+bs.charset = 'utf-8'; bs.src = src;
+
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(bs, s);
+})();
+-->
+</script>
+
+<!-- Yahoo! universal tag20140428 -->
+<script type="text/javascript">
+  (function () {
+    var tagjs = document.createElement("script");
+    var s = document.getElementsByTagName("script")[0];
+    tagjs.async = true;
+    tagjs.src = "//s.yjtag.jp/tag.js#site=RQy4lEl";
+    s.parentNode.insertBefore(tagjs, s);
+  }());
+</script>
+<noscript>
+  <iframe src="//b.yjtag.jp/iframe?c=RQy4lEl" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</noscript>
+<!-- Yahoo! universal tag -->
+
+
+</body>
+</html>

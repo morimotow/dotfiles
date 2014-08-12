@@ -113,3 +113,12 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls="ls --color=auto"
+
+
+# ターミナルからgvimを使用するための設定
+if [ `uname` =  "Darwin" ] ; then
+  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+  alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g "$@" &'
+fi
+
+

@@ -22,3 +22,4 @@ endfunction
 function! s:Byte2hex(bytes)
   return join(map(copy(a:bytes), 'printf("%02X", v:val)'), '')
 endfunction
+
