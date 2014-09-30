@@ -15,7 +15,7 @@ if has('multi_byte_ime') || has('xim')
 endif
 
 "IMEの状態をカラー表示
-if has('multi_byte_ime')
+if has('multi_byte_ime') || has('xim')
   highlight Cursor guifg=NONE guibg=Green
   highlight CursorIM guifg=NONE guibg=Purple
 endif
