@@ -15,6 +15,6 @@ export PATH="~/scripts:/usr/local/bin:$PATH"
 # こうすると、パスの場所にディレクトリが存在しない場合、パスが空文字列に置換される
 # 詳細は `man zshexpn` の Glob Qualifiers を参照
 path=(
-    ~/script(N-)
+    ~/scripts(N-)
     $path
 )

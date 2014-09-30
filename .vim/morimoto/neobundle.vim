@@ -39,4 +39,27 @@ if has('lua')
   NeoBundle 'Shougo/neocomplete', {'lazy': 1, 'autoload': {'insert': 1 }}
 endif
 
+" Javascript開発環境(node.jsが必要)
+NeoBundleLazy 'marijnh/tern_for_vim', {
+  \ 'build': {
+  \   'mac': 'npm install',
+  \   'unix': 'npm install'
+  \},
+  \'autoload': {'filetypes': ['javascript', 'typescript'],'functions': ['tern#Complete', 'tern#Enable']}
+\}
+
+" ctags読み込み
+NeoBundleLazy 'majutsushi/tagbar', {
+  \   'autoload' : { 'commands' : [ 'TagbarToggle' ] }
+  \ }
+
+" 文法チェック
+NeoBundleLazy 'scrooloose/syntastic', {
+  \   'autoload' : { 'commands' : [ 'SyntasticCheck' ] }
+  \ }
+
+" SQL文実行
+NeoBundleLazy 'vim-scripts/dbext.vim', {
+  \   'autoload' : { 'filetypes' : [ 'sql' ] }
+  \ }
 filetype plugin indent on
