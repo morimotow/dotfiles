@@ -2,12 +2,12 @@
 "フォントは英語名で指定すると問題が起きにくくなります
 if has('xfontset')
 "  set guifontset=a14,r14,k14
+elseif has('mac')
+  set guifont=Ricty:h16
+  set guifontwide=Ricty:h16
+  set ambiwidth=auto
 elseif has('unix')
   set guifont=Ricty\ Diminished\ 12
-elseif has('mac')
-  set guifont=Ricty:h14
-  set guifontwide=Ricty:h14
-  set ambiwidth=auto
 elseif has('win32') || has('win64')
   set guifont=Consolas:h14
   set guifontwide=MeiryoKe_Console:h14
