@@ -3,10 +3,10 @@ filetype plugin indent off
 " Linux、Macの場合は.vim、Windowsの場合はvimfilesディレクトリを使う
 if has('unix') || has('mac')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand("~/.vim/bundle/"))
+  call neobundle#begin(expand("~/.vim/bundle/"))
 else
   set runtimepath+=$HOME\vimfiles\bundle\neobundle.vim\
-  call neobundle#rc(expand("$HOME\\vimfiles\\bundle\\"))
+  call neobundle#begin(expand("$HOME\\vimfiles\\bundle\\"))
 endif
 
 " プラグインの一覧
@@ -62,4 +62,6 @@ NeoBundleLazy 'scrooloose/syntastic', {
 NeoBundleLazy 'vim-scripts/dbext.vim', {
   \   'autoload' : { 'filetypes' : [ 'sql' ] }
   \ }
+
+call neobundle#end()
 filetype plugin indent on
