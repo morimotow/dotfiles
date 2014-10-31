@@ -5,7 +5,7 @@ if has('xfontset')
 elseif has('mac')
   set guifont=Ricty:h16
   set guifontwide=Ricty:h16
-  set ambiwidth=auto
+"  set ambiwidth=auto
 elseif has('unix')
   set guifont=Ricty\ Diminished\ 12
 elseif has('win32') || has('win64')
