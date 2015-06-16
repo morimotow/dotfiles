@@ -63,5 +63,17 @@ NeoBundleLazy 'vim-scripts/dbext.vim', {
   \   'autoload' : { 'filetypes' : [ 'sql' ] }
   \ }
 
+" Markdown編集
+NeoBundleLazy 'plasticboy/vim-markdown', {
+  \   'autoload' : { 'filetypes' : [ 'markdown' ] }
+  \ }
+NeoBundleLazy 'kannokanno/previm', {
+  \   'autoload' : { 'filetypes' : [ 'markdown' ] }
+  \ }
+NeoBundleLazy 'tyru/open-browser.vim', {
+  \   'autoload' : { 'filetypes' : [ 'markdown' ] }
+  \ }
+au BufRead,BufNewFile *.md set filetype=markdown
+
 call neobundle#end()
 filetype plugin indent on
