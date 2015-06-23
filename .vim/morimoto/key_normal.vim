@@ -22,7 +22,7 @@ if has('folding')
 endif
 
 "Escの2回押しでハイライト消去
-nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " CTRL-hjklでウィンドウ移動
 noremap <C-j> <C-w>j
