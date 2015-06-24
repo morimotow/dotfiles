@@ -23,6 +23,17 @@ NeoBundleLazy 'thinca/vim-quickrun', {
 NeoBundleLazy 'Shougo/unite.vim' , {
 			\   'autoload' : { 'commands' : [ 'Unite' ] }
 			\ }
+NeoBundleLazy 'Shougo/vimfiler', {
+	  \ 'depends' : 'Shougo/unite.vim',
+	  \ 'autoload' : {
+	  \    'commands' : [{ 'name' : 'VimFiler',
+	  \                    'complete' : 'customlist,vimfiler#complete' },
+	  \                  'VimFilerExplorer',
+	  \                  'Edit', 'Read', 'Source', 'Write'],
+	  \    'mappings' : '<Plug>',
+	  \    'explorer' : 1,
+	  \ }
+	  \ }
 
 " プロジェクト管理
 NeoBundle 'vimplugin/project.vim'
