@@ -13,6 +13,18 @@ endif
 NeoBundle 'Shougo/neobundle.vim'  " NeoBundle本体
 NeoBundle 'vim-jp/vimdoc-ja'      " 日本語ヘルプ(最初に1回だけ helptags ~/.vim/bundle/vimdoc-ja/docを実行)
 
+" VimProc(kaoriyawindows版は導入済み)
+if has('unix') || has('mac')
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+\ }
+endif
+
 " Shellなどの実行機能
 NeoBundleLazy 'thinca/vim-quickrun', {
         \ 'autoload' : {
