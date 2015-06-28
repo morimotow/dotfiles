@@ -20,6 +20,7 @@ NeoBundleLazy 'thinca/vim-quickrun', {
         \ 'commands' : 'QuickRun',
         \ }}
 
+NeoBundle 'Shougo/neomru.vim'
 NeoBundleLazy 'Shougo/unite.vim' , {
 			\   'autoload' : { 'commands' : [ 'Unite' ] }
 			\ }
