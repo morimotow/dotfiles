@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>HHKB Private Cursor</name>
+		<identifier>private.hhkb_num_cursor</identifier>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_SLASH, KeyCode::CURSOR_DOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::PAGEUP, KeyCode::CURSOR_RIGHT</autogen>
+		<autogen>__KeyToKey__ KeyCode::HOME, KeyCode::CURSOR_UP</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_MULTIPLY, KeyCode::CURSOR_LEFT</autogen>
+		<autogen>__KeyToKey__ KeyCode::PC_PRINTSCREEN, KeyCode::HOME</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::END</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_DOWN, KeyCode::PAGEDOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_UP, KeyCode::PAGEUP</autogen>
+	</item>
+	<item>
+		<name>HHKB Private ime</name>
+		<identifier>private.hhkb_ime_plus</identifier>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_PLUS, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
+	</item>
+	
+</root>
