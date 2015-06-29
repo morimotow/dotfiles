@@ -8,6 +8,8 @@ function! s:bundle.hooks.on_source(bundle)
         let g:neocomplete#keyword_patterns = {}
     endif
     let g:neocomplete#keyword_patterns._ = '\h\w*'
+	inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 endfunction
 unlet s:bundle
 

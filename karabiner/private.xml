@@ -17,5 +17,5 @@
 		<identifier>private.hhkb_ime_plus</identifier>
 		<autogen>__KeyToKey__ KeyCode::KEYPAD_PLUS, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
 	</item>
-	
+
 </root>
