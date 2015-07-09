@@ -23,6 +23,7 @@ if has('unix') || has('mac')
 	source $HOME/.vim/morimoto/statushilite.vim
 	source $HOME/.vim/morimoto/statusline.vim
 	source $HOME/.vim/morimoto/zenkakuspace.vim
+	source $HOME/.vim/morimoto/filetype.vim
 else
 	source $HOME\vimfiles\morimoto\base.vim
 	source $HOME\vimfiles\morimoto\display.vim
@@ -32,6 +33,7 @@ else
 	source $HOME\vimfiles\morimoto\statushilite.vim
 	source $HOME\vimfiles\morimoto\statusline.vim
 	source $HOME\vimfiles\morimoto\zenkakuspace.vim
+	source $HOME/.vim/morimoto/filetype.vim
 
 endif
 
