@@ -1,3 +1,4 @@
+
 " neocomplete用の設定
 let s:bundle = neobundle#get('neocomplete')
 function! s:bundle.hooks.on_source(bundle)
@@ -12,4 +13,3 @@ function! s:bundle.hooks.on_source(bundle)
 	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 endfunction
 unlet s:bundle
-

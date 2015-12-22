@@ -61,4 +61,3 @@ set shiftwidth=4
 " 折り返ししない
 set nowrap
 set textwidth=0
-set formatoptions=q

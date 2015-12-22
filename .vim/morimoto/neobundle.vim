@@ -5,25 +5,21 @@ if has('unix') || has('mac')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand("~/.vim/bundle/"))
 else
-  set runtimepath+=$HOME\vimfiles\bundle\neobundle.vim\
-  call neobundle#begin(expand("$HOME\\vimfiles\\bundle\\"))
+  set runtimepath+=$HOME/vimfiles/bundle/neobundle.vim/
+  call neobundle#begin(expand("$HOME/vimfiles/bundle/"))
 endif
 
 " プラグインの一覧
 NeoBundle 'Shougo/neobundle.vim'  " NeoBundle本体
 NeoBundle 'vim-jp/vimdoc-ja'      " 日本語ヘルプ(最初に1回だけ helptags ~/.vim/bundle/vimdoc-ja/docを実行)
 
-" VimProc(kaoriyawindows版は導入済み)
-if has('unix') || has('mac')
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
-endif
+" 囲み文字テキストオブジェクト
+NeoBundle 'tpope/vim-surround'
+
+" テキストオブジェクト置換
+NeoBundle 'kana/vim-operator-replace.git'
+NeoBundle 'kana/vim-operator-user.git'
+map R  <Plug>(operator-replace)
 
 " Shellなどの実行機能
 NeoBundleLazy 'thinca/vim-quickrun', {
@@ -32,10 +28,11 @@ NeoBundleLazy 'thinca/vim-quickrun', {
         \ 'commands' : 'QuickRun',
         \ }}
 
-NeoBundle 'Shougo/neomru.vim'
 NeoBundleLazy 'Shougo/unite.vim' , {
 			\   'autoload' : { 'commands' : [ 'Unite' ] }
 			\ }
+NeoBundle 'Shougo/neomru.vim'
+
 NeoBundleLazy 'Shougo/vimfiler', {
 	  \ 'depends' : 'Shougo/unite.vim',
 	  \ 'autoload' : {
@@ -54,14 +51,12 @@ NeoBundle 'vimplugin/project.vim'
 " プロジェクト毎に設定ファイルを分ける
 NeoBundle 'thinca/vim-localrc'
 
-NeoBundleLazy 'ryoppy/vim-scp-upload', {
-			\   'autoload' : { 'commands' : [ '<Leader>scp' ] }
-			\ }
-
 " 文字列補完機能
 if has('lua')
   NeoBundle 'Shougo/neocomplete', {'lazy': 1, 'autoload': {'insert': 1 }}
 endif
+NeoBundle 'Shougo/neosnippet-snippets', {'lazy': 1, 'autoload': {'insert': 1 }}
+NeoBundle 'Shougo/neosnippet', {'lazy': 1, 'autoload': {'insert': 1 }}
 
 " Javascript開発環境(node.jsが必要)
 NeoBundleLazy 'marijnh/tern_for_vim', {
@@ -87,7 +82,8 @@ NeoBundleLazy 'vim-scripts/dbext.vim', {
   \   'autoload' : { 'filetypes' : [ 'sql' ] }
   \ }
 
-" Markdown編集
+NeoBundle 'tfnico/vim-gradle'
+
 NeoBundleLazy 'plasticboy/vim-markdown', {
   \   'autoload' : { 'filetypes' : [ 'markdown' ] }
   \ }
@@ -97,7 +93,14 @@ NeoBundleLazy 'kannokanno/previm', {
 NeoBundleLazy 'tyru/open-browser.vim', {
   \   'autoload' : { 'filetypes' : [ 'markdown' ] }
   \ }
-au BufRead,BufNewFile *.md set filetype=markdown
+
+NeoBundleLazy 'cohama/agit.vim', {
+  \   'autoload' : { 'commands' : [ 'Agit' ] }
+  \ }
+
+NeoBundleLazy 'Shougo/vimshell.vim', {
+  \   'autoload' : { 'commands' : [ 'VimShell' ] }
+  \ }
 
 call neobundle#end()
 filetype plugin indent on

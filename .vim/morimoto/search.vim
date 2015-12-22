@@ -15,4 +15,8 @@ set hlsearch
 "set iskeyword=a-z,A-Z,48-57,_,.,-,>
 "vimgrep をデフォルトのgrepとする場合internal
 "set grepprg=internal
-
+if executable('pt')
+	set grepprg=pt\ --nogroup\ --nocolor
+endif
+autocmd QuickfixCmdPost vimgrep copen
+autocmd QuickfixCmdPost grep copen
