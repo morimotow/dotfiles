@@ -33,7 +33,7 @@ else
 	source $HOME\vimfiles\morimoto\statushilite.vim
 	source $HOME\vimfiles\morimoto\statusline.vim
 	source $HOME\vimfiles\morimoto\zenkakuspace.vim
-	source $HOME/.vim/morimoto/filetype.vim
+	source $HOME\vimfiles\morimoto\filetype.vim
 
 endif
 

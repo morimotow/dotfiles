@@ -14,13 +14,14 @@ if not exist %USERPROFILE%\_vimrc (
 if not exist %USERPROFILE%\_gvimrc (
   mklink %USERPROFILE%\_gvimrc %USERPROFILE%\dotfiles\.gvimrc
 )
+if not exist %USERPROFILE%\.gitignore_global (
+  mklink %USERPROFILE%\.gitignore_global %USERPROFILE%\dotfiles\.gitignore_global
+)
+
 if not exist %USERPROFILE%\vimfiles\morimoto (
   mklink /d %USERPROFILE%\vimfiles\morimoto %USERPROFILE%\dotfiles\.vim\morimoto
 )
 if not exist %USERPROFILE%\vimfiles\g_morimoto (
   mklink /d %USERPROFILE%\vimfiles\g_morimoto %USERPROFILE%\dotfiles\.vim\g_morimoto
-)
-if not exist %USERPROFILE%\vimfiles\after (
-  mklink /d %USERPROFILE%\vimfiles\after %USERPROFILE%\dotfiles\.vim\after
 )
 

@@ -20,7 +20,9 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-let g:neosnippet#snippets_directory='C:\Users\MG42581\vimfiles\snippets\'
+if has('win32') || has('win64')
+	let g:neosnippet#snippets_directory='$USERPROFILE\vimfiles\snippets\'
+endif
 
 endfunction
 unlet s:bundle

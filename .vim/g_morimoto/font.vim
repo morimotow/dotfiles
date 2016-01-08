@@ -13,6 +13,7 @@ elseif has('win32') || has('win64')
   set guifontwide=MeiryoKe_Console:h12
   set ambiwidth=auto
 "  set rop=type:directx
+  set renderoptions=type:directx,renmode:5
 endif
 
 "印刷用フォント
