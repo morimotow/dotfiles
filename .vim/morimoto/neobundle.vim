@@ -1,7 +1,7 @@
 filetype off
 filetype plugin indent off
 " Linux、Macの場合は.vim、Windowsの場合はvimfilesディレクトリを使う
-if has('unix') || has('mac')
+if has('unix') || has('mac') || has('win32unix')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand("~/.vim/bundle/"))
 else
@@ -11,6 +11,17 @@ endif
 
 " プラグインの一覧
 NeoBundle 'Shougo/neobundle.vim'  " NeoBundle本体
+
+" Vimproc(windows/mac版は同梱)
+if !has('win32') && !has('mac')
+  NeoBundle 'Shougo/vimproc', {
+    \ 'build' : {
+      \ 'cygwin' : 'make -f make_cygwin.mak',
+      \ 'unix' : 'make -f make_unix.mak',
+    \ },
+  \ }
+endif
+
 NeoBundle 'vim-jp/vimdoc-ja'      " 日本語ヘルプ(最初に1回だけ helptags ~/.vim/bundle/vimdoc-ja/docを実行)
 
 " 囲み文字テキストオブジェクト
@@ -49,7 +60,7 @@ NeoBundleLazy 'Shougo/vimfiler', {
 NeoBundle 'vimplugin/project.vim'
 
 " プロジェクト毎に設定ファイルを分ける
-NeoBundle 'thinca/vim-localrc'
+NeoBundle 'embear/vim-localvimrc'
 
 " 文字列補完機能
 if has('lua')
@@ -58,14 +69,16 @@ endif
 NeoBundle 'Shougo/neosnippet-snippets', {'lazy': 1, 'autoload': {'insert': 1 }}
 NeoBundle 'Shougo/neosnippet', {'lazy': 1, 'autoload': {'insert': 1 }}
 
-" Javascript開発環境(node.jsが必要)
-NeoBundleLazy 'marijnh/tern_for_vim', {
-  \ 'build': {
-  \   'mac': 'npm install',
-  \   'unix': 'npm install'
-  \},
-  \'autoload': {'filetypes': ['javascript', 'typescript'],'functions': ['tern#Complete', 'tern#Enable']}
-\}
+" Javascript開発環境(node.jsが必要 - mac/unix[cygwin除外])
+if (has('mac') || has('unix')) && !has('win32unix')
+  NeoBundleLazy 'marijnh/tern_for_vim', {
+    \ 'build': {
+    \   'mac': 'npm install',
+    \   'unix': 'npm install'
+    \},
+    \'autoload': {'filetypes': ['javascript', 'typescript'],'functions': ['tern#Complete', 'tern#Enable']}
+  \}
+endif
 
 " ctags読み込み
 NeoBundleLazy 'majutsushi/tagbar', {

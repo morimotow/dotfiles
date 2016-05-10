@@ -44,3 +44,12 @@ endif
 "colorscheme mycolor
 set t_Co=256
 colorscheme ron
+
+" Cygwin用コンソールカーソル形状変更
+if has('win32unix')
+  let &t_ti .= "\e[1 q"  " 端末を termcap モードにする
+  let &t_SI .= "\e[5 q"  " 挿入モード開始(バー型のカーソル)
+  let &t_EI .= "\e[1 q"  " 挿入モード終了(ブロック型カーソル)
+  let &t_te .= "\e[0 q"  " termcap モードから抜ける
+endif
+
