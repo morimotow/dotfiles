@@ -7,7 +7,7 @@ export EDITOR=/usr/bin/vim
 
 # PATH の設定（お好みで）
 if [ `uname` =  "Darwin" ] ; then
-  export PATH="~/scripts:$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:$PATH"
+  export PATH="~/scripts:/usr/local/bin:$PATH"
 # For Cygwin.
 elif [ "$( uname -o )" = 'Cygwin' ]; then
   cd
