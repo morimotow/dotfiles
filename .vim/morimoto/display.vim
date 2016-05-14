@@ -45,11 +45,16 @@ endif
 set t_Co=256
 colorscheme ron
 
-" Cygwin用コンソールカーソル形状変更
+" Cygwin用コンソールカーソル形状変更(mintty)
 if has('win32unix')
   let &t_ti .= "\e[1 q"  " 端末を termcap モードにする
   let &t_SI .= "\e[5 q"  " 挿入モード開始(バー型のカーソル)
   let &t_EI .= "\e[1 q"  " 挿入モード終了(ブロック型カーソル)
   let &t_te .= "\e[0 q"  " termcap モードから抜ける
 endif
-
+" mac用コンソールカーソル形状変更(iterm2)
+if has('mac')
+  let &t_SI = "\e]50;CursorShape=1\x7"
+  let &t_EI = "\e]50;CursorShape=0\x7"
+  inoremap <Esc> <Esc>gg`]
+endif

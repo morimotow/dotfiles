@@ -117,11 +117,11 @@ alias ls="ls --color=auto"
 
 # ターミナルからgvimを使用するための設定
 if [ `uname` =  "Darwin" ] ; then
-  export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-  alias gvim='/Applications/MacVim.app/Contents/MacOS/mvim "$@"'
-  alias vimdiff=/Applications/MacVim.app/Contents/MacOS/vimdiff
-  alias view=/Applications/MacVim.app/Contents/MacOS/view
+  export EDITOR=~/Applications/MacVim.app/Contents/MacOS/Vim
+  alias vim='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+  alias gvim='~/Applications/MacVim.app/Contents/MacOS/mvim "$@"'
+  alias vimdiff=~/Applications/MacVim.app/Contents/MacOS/vimdiff
+  alias view=~/Applications/MacVim.app/Contents/MacOS/view
 fi
 
 

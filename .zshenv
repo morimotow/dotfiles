@@ -8,13 +8,11 @@ export EDITOR=/usr/bin/vim
 # PATH の設定（お好みで）
 if [ `uname` =  "Darwin" ] ; then
   export PATH="~/scripts:$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:$PATH"
-fi
 # For Cygwin.
-if [ "$( uname -o )" = 'Cygwin' ]; then
+elif [ "$( uname -o )" = 'Cygwin' ]; then
   cd
-fi
 # For Cygwin.
-if [ "$( uname -o )" = 'GNU/Linux' ]; then
+elif [ "$( uname -o )" = 'GNU/Linux' ]; then
   cd
 fi
 # PATH の内容と同期している配列変数 path も使える
