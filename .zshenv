@@ -6,8 +6,17 @@ export LC_ALL=ja_JP.UTF-8
 export EDITOR=/usr/bin/vim
 
 # PATH の設定（お好みで）
-export PATH="~/scripts:$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:$PATH"
-
+if [ `uname` =  "Darwin" ] ; then
+  export PATH="~/scripts:$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:$PATH"
+fi
+# For Cygwin.
+if [ "$( uname -o )" = 'Cygwin' ]; then
+  cd
+fi
+# For Cygwin.
+if [ "$( uname -o )" = 'GNU/Linux' ]; then
+  cd
+fi
 # PATH の内容と同期している配列変数 path も使える
 # もし .zshenv を複数のマシンで共有していて、
 # あるマシンには存在するが別のマシンには存在しないパスを PATH に追加したいなら、
