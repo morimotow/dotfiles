@@ -20,6 +20,7 @@ if has('unix') || has('mac')
 	source $HOME/.vim/morimoto/neobundle.vim
 	source $HOME/.vim/morimoto/search.vim
 	source $HOME/.vim/morimoto/key_normal.vim
+	source $HOME/.vim/morimoto/key_insert.vim
 	source $HOME/.vim/morimoto/statushilite.vim
 	source $HOME/.vim/morimoto/statusline.vim
 	source $HOME/.vim/morimoto/zenkakuspace.vim
@@ -30,6 +31,7 @@ else
 	source $HOME\vimfiles\morimoto\neobundle.vim
 	source $HOME\vimfiles\morimoto\search.vim
 	source $HOME\vimfiles\morimoto\key_normal.vim
+	source $HOME\vimfiles\morimoto\key_insert.vim
 	source $HOME\vimfiles\morimoto\statushilite.vim
 	source $HOME\vimfiles\morimoto\statusline.vim
 	source $HOME\vimfiles\morimoto\zenkakuspace.vim
