@@ -24,4 +24,7 @@ if not exist %USERPROFILE%\vimfiles\morimoto (
 if not exist %USERPROFILE%\vimfiles\g_morimoto (
   mklink /d %USERPROFILE%\vimfiles\g_morimoto %USERPROFILE%\dotfiles\.vim\g_morimoto
 )
+if not exist %USERPROFILE%\vimfiles\colors (
+  mklink /d %USERPROFILE%\vimfiles\colors %USERPROFILE%\dotfiles\.vim\colors
+)
 
