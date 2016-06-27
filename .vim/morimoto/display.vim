@@ -43,7 +43,7 @@ endif
 "gvimの色テーマは.gvimrcで指定する
 "colorscheme mycolor
 set t_Co=256
-colorscheme ron
+colorscheme desert256
 
 " Cygwin用コンソールカーソル形状変更(mintty)
 if has('win32unix')
