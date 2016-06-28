@@ -1,4 +1,4 @@
-execute 'source' expand(expand("<sfile>:p:h")) . "/conn.vim"
+" execute 'source' expand(expand("<sfile>:p:h")) . "/conn.vim"
 
 " dbextからsqlplusを実行する際のNLS設定
 let $NLS_LANG = "Japanese_Japan.AL32UTF8"
