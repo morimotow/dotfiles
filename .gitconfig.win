@@ -1,5 +1,7 @@
 [core]
     excludesfile = $HOME/.gitignore_global
+    quotepath = false
+    autoCRLF = false
 [merge]
     tool = winmerge
 [mergetool "winmerge"]
