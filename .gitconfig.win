@@ -12,4 +12,4 @@
     guitool = winmerge
 [difftool "winmerge"]
     path = \"C:\\Program Files\\WinMerge\\WinMergeU.exe\"
-    cmd  = \"C:\\Program Files\\WinMerge\\WinMergeU.exe\" -e -ub -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\"
+    cmd  = \"C:\\Program Files\\WinMerge\\WinMergeU.exe\" -e -u -r -ub -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\"

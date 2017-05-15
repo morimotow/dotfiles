@@ -9,11 +9,11 @@ elseif has('mac')
 elseif has('unix')
   set guifont=Ricty\ Diminished\ 12
 elseif has('win32') || has('win64')
-  set guifont=Consolas:h12
-  set guifontwide=MeiryoKe_Console:h12
+"  set guifont=Myrica\ M:h14
+  set guifont=Consolas:h13
+  set guifontwide=MeiryoKe_Console:h13
   set ambiwidth=auto
-"  set rop=type:directx
-  set renderoptions=type:directx,renmode:5
+  set renderoptions=type:directx,geom:1,renmode:5,level:0.75
 endif
 
 "印刷用フォント

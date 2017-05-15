@@ -16,6 +16,7 @@ NeoBundle 'Shougo/neobundle.vim'  " NeoBundle本体
 if !has('win32') && !has('mac')
   NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
+      \ 'windows' : 'make -f make_mingw32.mak',
       \ 'cygwin' : 'make -f make_cygwin.mak',
       \ 'unix' : 'make -f make_unix.mak',
     \ },
@@ -113,6 +114,10 @@ NeoBundleLazy 'cohama/agit.vim', {
 
 NeoBundleLazy 'Shougo/vimshell.vim', {
   \   'autoload' : { 'commands' : [ 'VimShell' ] }
+  \ }
+
+NeoBundleLazy 'junegunn/vim-easy-align', {
+  \   'autoload' : { 'commands' : [ 'EasyAlign' ] }
   \ }
 
 call neobundle#end()

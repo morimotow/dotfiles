@@ -5,6 +5,8 @@
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 
+:set encoding=utf-8
+
 "ファイルの上書きの前にバックアップを作る/作らない
 "set writebackupを指定してもオプション 'backup' がオンでない限り、
 "バックアップは上書きに成功した後に削除される。

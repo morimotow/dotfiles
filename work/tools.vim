@@ -15,7 +15,7 @@ function! M_DBCreateTestData() range
 	let t_name = line[0]
 
 	" delete文
-	execute a:firstline. ',' a:firstline. 's/^\(.*\)$/delete from \1 where ;/'
+"	execute a:firstline. ',' a:firstline. 's/^\(.*\)$/delete from \1 where ;/'
 
 	" insert文
 	execute ''. (a:firstline + 1). ',' (a:firstline + 1). 's/\t/,/g | :s/^/insert into '. t_name . '(/ | :s/$/)/'
@@ -29,12 +29,15 @@ function! M_DBCreateTestData() range
 	
 	" データ行が1行の場合はここで終わり
 	if a:lastline - a:firstline <= 2
+		execute a:firstline. ',' a:firstline. 'delete'
 		return
 	endif
 
 	" insert文をそれぞれvalues句に追加
 	let insert_sql = getline(a:firstline + 1)
 	execute ''. (a:firstline + 3). ',' (a:lastline). 's/^/'. insert_sql . '/g'
+
+	execute a:firstline. ',' a:firstline. 'delete'
 
 	nohlsearch
 endfunction

@@ -57,3 +57,11 @@ if has('mac')
   let &t_SI = "\e]50;CursorShape=1\x7"
   let &t_EI = "\e]50;CursorShape=0\x7"
 endif
+" Windowsコンソール用カラースキーマ設定
+if (has('win32') && !has('gui_running') && $ConEmuANSI == 'ON')
+    set termencoding=cp932
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+endif

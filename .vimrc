@@ -14,18 +14,7 @@ else
 endif
 
 " 基本的な設定ファイルを読み込む
-if has('unix') || has('mac')
-	source $HOME/.vim/morimoto/base.vim
-	source $HOME/.vim/morimoto/display.vim
-	source $HOME/.vim/morimoto/neobundle.vim
-	source $HOME/.vim/morimoto/search.vim
-	source $HOME/.vim/morimoto/key_normal.vim
-	source $HOME/.vim/morimoto/key_insert.vim
-	source $HOME/.vim/morimoto/statushilite.vim
-	source $HOME/.vim/morimoto/statusline.vim
-	source $HOME/.vim/morimoto/zenkakuspace.vim
-	source $HOME/.vim/morimoto/filetype.vim
-else
+if has('win32') || has('win64')
 	source $HOME\vimfiles\morimoto\base.vim
 	source $HOME\vimfiles\morimoto\display.vim
 	source $HOME\vimfiles\morimoto\neobundle.vim
@@ -36,6 +25,17 @@ else
 	source $HOME\vimfiles\morimoto\statusline.vim
 	source $HOME\vimfiles\morimoto\zenkakuspace.vim
 	source $HOME\vimfiles\morimoto\filetype.vim
+else
+	source $HOME/.vim/morimoto/base.vim
+	source $HOME/.vim/morimoto/display.vim
+	source $HOME/.vim/morimoto/neobundle.vim
+	source $HOME/.vim/morimoto/search.vim
+	source $HOME/.vim/morimoto/key_normal.vim
+	source $HOME/.vim/morimoto/key_insert.vim
+	source $HOME/.vim/morimoto/statushilite.vim
+	source $HOME/.vim/morimoto/statusline.vim
+	source $HOME/.vim/morimoto/zenkakuspace.vim
+	source $HOME/.vim/morimoto/filetype.vim
 
 endif
 

@@ -3,7 +3,6 @@
 .DS_Store
 .local.vimrc
 .tern-project
-.vimprojects
 .jshintrc
 tags
 tags.txt
