@@ -13,7 +13,7 @@ if [ ! -d $HOME/.vim ] ; then
 fi
 if [ ! -d $HOME/.vim/bundle ] ; then
   mkdir $HOME/.vim/bundle
-  git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+  git clone https://github.com/Shougo/dein.vim $HOME/.vim/bundle/dein.vim
 fi
 ln -sf $SCR_DIR/.vimrc $HOME/.vimrc
 ln -sf $SCR_DIR/.gvimrc $HOME/.gvimrc
