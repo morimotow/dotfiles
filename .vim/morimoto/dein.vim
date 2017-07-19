@@ -1,4 +1,6 @@
 
+filetype plugin indent off
+
 " Linux、Macの場合は.vim、Windowsの場合はvimfilesディレクトリを使う
 let s:dein_path = ''
 if has('unix') || has('mac') || has('win32unix')

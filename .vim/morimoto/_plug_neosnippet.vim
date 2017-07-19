@@ -1,7 +1,4 @@
-
 " neosnipet用の設定
-let s:bundle = neobundle#get('neosnippet')
-function! s:bundle.hooks.on_source(bundle)
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -24,5 +21,3 @@ if has('win32') || has('win64')
 	let g:neosnippet#snippets_directory='$USERPROFILE\vimfiles\snippets\'
 endif
 
-endfunction
-unlet s:bundle

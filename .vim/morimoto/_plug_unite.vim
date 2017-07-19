@@ -8,23 +8,19 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> ,ug  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 
-let s:bundle = neobundle#get('unite.vim')
-function! s:bundle.hooks.on_source(bundle)
-	let g:unite_enable_start_insert=1
-	let g:unite_source_history_yank_enable =1
-	let g:unite_source_file_mru_limit = 200
-	
-	" 大文字小文字を区別しない
-	let g:unite_enable_ignore_case = 1
-	let g:unite_enable_smart_case = 1
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
 
-	" grep検索
-	if executable('pt')
-	  let g:unite_source_grep_command = 'pt'
-	  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-	  let g:unite_source_grep_recursive_opt = ''
-	  let g:unite_source_grep_encoding = 'utf-8'
-	endif
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
 
-endfunction
-unlet s:bundle
+" grep検索
+if executable('pt')
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_encoding = 'utf-8'
+endif
+

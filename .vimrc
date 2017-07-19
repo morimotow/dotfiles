@@ -1,5 +1,5 @@
-scriptencoding utf-8
 set encoding=utf-8
+scriptencoding utf-8
 set fileformat=unix
 
 " Vi互換OFF
@@ -37,5 +37,3 @@ call M_LoadLocalBaseSetting('statusline.vim')
 call M_LoadLocalBaseSetting('zenkakuspace.vim')
 call M_LoadLocalBaseSetting('filetype.vim')
 call M_LoadLocalBaseSetting('dein.vim')
-
-
