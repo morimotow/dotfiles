@@ -32,3 +32,4 @@ noremap <C-l> <C-w>l
 
 nnoremap <X1Mouse> <C-O>
 nnoremap <X2Mouse> <C-I>
+

@@ -6,7 +6,7 @@ if not exist %USERPROFILE%\vimfiles (
 )
 if not exist %USERPROFILE%\vimfiles\bundle (
   mkdir %USERPROFILE%\vimfiles\bundle
-  git clone https://github.com/Shougo/neobundle.vim %USERPROFILE%\vimfiles\bundle\neobundle.vim
+  git clone https://github.com/Shougo/dein.vim %USERPROFILE%\vimfiles\bundle\dein.vim
 )
 if not exist %USERPROFILE%\_vimrc (
   mklink %USERPROFILE%\_vimrc %~dp0\.vimrc
