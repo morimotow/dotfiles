@@ -1,0 +1,25 @@
+# プラグインマネージャ本体
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# vimproc(windows/mac版は同梱)
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+if = '!has('win32') && !has('mac')'
+
+# 日本語ヘルプ
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+# プロジェクト管理
+[[plugins]]
+repo = 'vimplugin/project.vim'
+hook_add = '''
+call M_LoadLocalBaseSetting('_plug_project.vim')
+'''
+
+# 囲み文字テキストオブジェクト
+[[plugins]]
+repo = 'tpope/vim-surround'
+

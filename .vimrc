@@ -14,26 +14,28 @@ else
 endif
 
 " 基本的な設定ファイルを読み込む
+let g:cui_config_path = ''
 if has('win32') || has('win64')
-	source $HOME\vimfiles\morimoto\base.vim
-	source $HOME\vimfiles\morimoto\display.vim
-	source $HOME\vimfiles\morimoto\search.vim
-	source $HOME\vimfiles\morimoto\key_normal.vim
-	source $HOME\vimfiles\morimoto\key_insert.vim
-	source $HOME\vimfiles\morimoto\statushilite.vim
-	source $HOME\vimfiles\morimoto\statusline.vim
-	source $HOME\vimfiles\morimoto\zenkakuspace.vim
-	source $HOME\vimfiles\morimoto\filetype.vim
+	let g:cui_config_path = $HOME. '\vimfiles\morimoto\'
 else
-	source $HOME/.vim/morimoto/base.vim
-	source $HOME/.vim/morimoto/display.vim
-	source $HOME/.vim/morimoto/search.vim
-	source $HOME/.vim/morimoto/key_normal.vim
-	source $HOME/.vim/morimoto/key_insert.vim
-	source $HOME/.vim/morimoto/statushilite.vim
-	source $HOME/.vim/morimoto/statusline.vim
-	source $HOME/.vim/morimoto/zenkakuspace.vim
-	source $HOME/.vim/morimoto/filetype.vim
-
+	let g:cui_config_path = $HOME. '/.vim/morimoto/'
 endif
+
+
+" 設定ファイル読み込み
+function! M_LoadLocalBaseSetting(config_name)
+  silent! exec 'source '. g:cui_config_path. a:config_name
+endfunction
+
+call M_LoadLocalBaseSetting('base.vim')
+call M_LoadLocalBaseSetting('display.vim')
+call M_LoadLocalBaseSetting('search.vim')
+call M_LoadLocalBaseSetting('key_normal.vim')
+call M_LoadLocalBaseSetting('key_insert.vim')
+call M_LoadLocalBaseSetting('statushilite.vim')
+call M_LoadLocalBaseSetting('statusline.vim')
+call M_LoadLocalBaseSetting('zenkakuspace.vim')
+call M_LoadLocalBaseSetting('filetype.vim')
+call M_LoadLocalBaseSetting('dein.vim')
+
 
