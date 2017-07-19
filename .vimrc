@@ -17,7 +17,6 @@ endif
 if has('win32') || has('win64')
 	source $HOME\vimfiles\morimoto\base.vim
 	source $HOME\vimfiles\morimoto\display.vim
-	source $HOME\vimfiles\morimoto\neobundle.vim
 	source $HOME\vimfiles\morimoto\search.vim
 	source $HOME\vimfiles\morimoto\key_normal.vim
 	source $HOME\vimfiles\morimoto\key_insert.vim
@@ -28,7 +27,6 @@ if has('win32') || has('win64')
 else
 	source $HOME/.vim/morimoto/base.vim
 	source $HOME/.vim/morimoto/display.vim
-	source $HOME/.vim/morimoto/neobundle.vim
 	source $HOME/.vim/morimoto/search.vim
 	source $HOME/.vim/morimoto/key_normal.vim
 	source $HOME/.vim/morimoto/key_insert.vim
@@ -39,5 +37,3 @@ else
 
 endif
 
-" プラグイン毎の設定ファイルを読み込む
-runtime! morimoto/_plug_*.vim
