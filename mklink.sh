@@ -21,6 +21,10 @@ ln -sf $SCR_DIR/.vim/morimoto $HOME/.vim/morimoto
 ln -sf $SCR_DIR/.vim/g_morimoto $HOME/.vim/g_morimoto
 ln -sf $SCR_DIR/.vim/colors $HOME/.vim/colors
 
+# Git関係
+ln -sf $SCR_DIR/.gitignore_global $HOME/.gitignore_global
+ln -sf $SCR_DIR/.gitconfig.wsl $HOME/.gitconfig
+
 # tmux
 ln -sf $SCR_DIR/.tmux.conf $HOME/.tmux.conf
 

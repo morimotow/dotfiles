@@ -18,10 +18,7 @@ if not exist %USERPROFILE%\.gitignore_global (
   mklink %USERPROFILE%\.gitignore_global %~dp0\.gitignore_global
 )
 if not exist %USERPROFILE%\.gitconfig (
-  mklink %USERPROFILE%\.gitconfig %~dp0\.gitconfig
-)
-if not exist %USERPROFILE%\.gitconfig.win (
-  mklink %USERPROFILE%\.gitconfig.win %~dp0\.gitconfig.win
+  mklink %USERPROFILE%\.gitconfig %~dp0\.gitconfig.win
 )
 
 if not exist %USERPROFILE%\vimfiles\morimoto (
