@@ -1,5 +1,21 @@
 #UseHook
 
+vHHKB = False
+
+; メニュー設定
+#Persistent 
+Menu, Tray, Add, HHKB, HHKBHandler  ; Creates a new menu item.
+Menu, Tray, Check, HHKB
+return
+
+; ; HHKB <-> 英語キーボード
+
+HHKBHandler:
+    Menu, Tray, ToggleCheck, HHKB
+    vHHKB := !vHHKB
+return
+
+; 英語キーボード->日本語キーボードに変換
 *+2::
 Send {@}
 return
@@ -49,16 +65,74 @@ VKF4::Send,{``}
 ]::Send,{\}
 *+]::Send,{|}
 
+; HHKB用入力項目
+*Home::
+    if (vHHKB)
+        Send {Blind}{Up}
+    else
+        Send {Blind}{Home}
+    return
 
-Home::Up
-PgUp::Right
-NumpadMult::Left
-NumpadDiv::Down
-PrintScreen::Home
-Left::End
-Up::PgUp
-Down::PgDn
-*NumpadAdd:: Send,{vkF4sc029}
+*PgUp::
+    if (vHHKB)
+        Send {Blind}{Right}
+    else
+        Send {Blind}{PgUp}
+    return
+
+*NumpadMult::
+    if (vHHKB)
+        Send {Blind}{Left}
+    else
+        Send {Blind}{NumpadMult}
+    return
+
+*NumpadDiv::
+    if (vHHKB)
+        Send {Blind}{Down}
+    else
+        Send {Blind}{NumpadDiv}
+    return
+
+*PrintScreen::
+    if (vHHKB)
+        Send {Blind}{Home}
+    else
+        Send {Blind}{PrintScreen}
+    return
+
+*Left::
+    if (vHHKB)
+        Send {Blind}{End}
+    else
+        Send {Blind}{Left}
+    return
+
+*Up::
+    if (vHHKB)
+        Send {Blind}{PgUp}
+    else
+        Send {Blind}{Up}
+    return
+
+*Down::
+    if (vHHKB)
+        Send {Blind}{PgDn}
+    else
+        Send {Blind}{Down}
+    return
+
+*NumpadAdd::
+    if (vHHKB)
+        Send {Blind}{vkF4sc029}
+    else
+        Send {Blind}{NumpadAdd}
+    return
+
+
+; 英語キーボード用キー入れ替え(HHKBでも使える)
+Capslock::Ctrl
+sc03a::Ctrl
 
 +WheelUp::  ; Scroll left.  
 ControlGetFocus, fcontrol, A  
